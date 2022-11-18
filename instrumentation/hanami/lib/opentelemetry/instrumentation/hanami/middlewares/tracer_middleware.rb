@@ -25,14 +25,17 @@ module OpenTelemetry
             span = OpenTelemetry::Instrumentation::Rack.current_span
             return unless span.recording?
 
-            span.set_attribute('http.route', env['hanami.route'].split.last) if env['hanami.route']
-            span.name = env['hanami.route'] if env['hanami.route']
+            # HERE COME THE HANAMI CUSTOM SPAN SETTINGS...
 
-            sinatra_response = ::Sinatra::Response.new([], response.first)
-            return unless sinatra_response.server_error?
-
-            span.record_exception(env['hanami.error'])
-            span.status = OpenTelemetry::Trace::Status.error
+            # EXAMPLE FROM SINATRA INSTRUMENTATION
+            # span.set_attribute('http.route', env['sinatra.route'].split.last) if env['sinatra.route']
+            # span.name = env['sinatra.route'] if env['sinatra.route']
+            #
+            # sinatra_response = ::Sinatra::Response.new([], response.first)
+            # return unless sinatra_response.server_error?
+            #
+            # span.record_exception(env['sinatra.error'])
+            # span.status = OpenTelemetry::Trace::Status.error
           end
         end
       end

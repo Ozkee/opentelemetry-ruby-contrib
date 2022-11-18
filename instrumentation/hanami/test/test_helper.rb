@@ -12,6 +12,7 @@ require 'opentelemetry-test-helpers'
 require 'minitest/autorun'
 require 'rack/test'
 require 'test_helpers/app_config'
+require 'pry'
 
 require_relative '../lib/opentelemetry-instrumentation-hanami'
 

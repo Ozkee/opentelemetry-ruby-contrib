@@ -15,6 +15,7 @@ describe OpenTelemetry::Instrumentation::Hanami do
 
   before do
     instrumentation.install
+    # binding.pry
     exporter.reset
   end
 
@@ -32,33 +33,18 @@ describe OpenTelemetry::Instrumentation::Hanami do
       _(exporter.finished_spans.size).must_equal 1
     end
 
-    # it 'records attributes' do
-    #   get '/ok'
-    #
-    #   _(exporter.finished_spans.first.attributes).must_equal(
-    #     'http.host' => 'example.org',
-    #     'http.method' => 'GET',
-    #     'http.route' => '/ok',
-    #     'http.scheme' => 'http',
-    #     'http.status_code' => 200,
-    #     'http.target' => '/ok'
-    #   )
-    # end
+    it 'records attributes' do
+      get '/ok'
 
-    # it 'traces templates' do
-    #   get '/one/with_template'
-    #
-    #   _(exporter.finished_spans.size).must_equal 3
-    #   _(exporter.finished_spans.map(&:name))
-    #     .must_equal [
-    #       'hanami.render_template',
-    #       'hanami.render_template',
-    #       'GET /with_template'
-    #     ]
-    #   _(exporter.finished_spans[0..1].map(&:attributes)
-    #     .map { |h| h['hanami.template_name'] })
-    #     .must_equal %w[layout foo_template]
-    # end
+      _(exporter.finished_spans.first.attributes).must_equal(
+        'http.host' => 'example.org',
+        'http.method' => 'GET',
+        # 'http.route' => '/ok',
+        'http.scheme' => 'http',
+        'http.status_code' => 200,
+        'http.target' => '/ok'
+      )
+    end
   end
 
   def app
