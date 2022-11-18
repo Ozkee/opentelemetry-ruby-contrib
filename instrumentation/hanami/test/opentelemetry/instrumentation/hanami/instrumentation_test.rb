@@ -15,7 +15,6 @@ describe OpenTelemetry::Instrumentation::Hanami do
 
   before do
     instrumentation.install
-    # binding.pry
     exporter.reset
   end
 
@@ -39,7 +38,6 @@ describe OpenTelemetry::Instrumentation::Hanami do
       _(exporter.finished_spans.first.attributes).must_equal(
         'http.host' => 'example.org',
         'http.method' => 'GET',
-        # 'http.route' => '/ok',
         'http.scheme' => 'http',
         'http.status_code' => 200,
         'http.target' => '/ok'
