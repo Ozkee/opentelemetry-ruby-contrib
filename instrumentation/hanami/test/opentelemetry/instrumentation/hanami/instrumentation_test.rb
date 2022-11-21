@@ -36,6 +36,7 @@ describe OpenTelemetry::Instrumentation::Hanami do
       get '/ok'
 
       _(exporter.finished_spans.first.attributes).must_equal(
+        'service.name' => 'Bookshelf::Application',
         'http.host' => 'example.org',
         'http.method' => 'GET',
         'http.scheme' => 'http',
