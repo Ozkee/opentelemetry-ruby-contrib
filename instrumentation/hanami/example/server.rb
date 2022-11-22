@@ -16,7 +16,6 @@ gemfile(true) do
   gem 'hanami-controller', '~> 2.0.0.rc1'
 
   gem 'rack', '2.2.4'
-  gem 'puma'
 
   gem 'opentelemetry-sdk'
   gem 'opentelemetry-instrumentation-hanami', path: '../../hanami'
