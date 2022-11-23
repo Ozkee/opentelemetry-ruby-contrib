@@ -6,4 +6,6 @@
 
 appraise 'hanami-2.0' do
   gem 'hanami', '2.0.0.rc1'
+  gem 'hanami-router', '2.0.0.rc1'
+  gem 'hanami-controller', '2.0.0.rc1'
 end
