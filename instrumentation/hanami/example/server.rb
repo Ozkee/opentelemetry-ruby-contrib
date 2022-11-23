@@ -11,9 +11,9 @@ require 'bundler/inline'
 gemfile(true) do
   source 'https://rubygems.org'
 
-  gem 'hanami', '~> 2.0.0.rc1'
-  gem 'hanami-router', '~> 2.0.0.rc1'
-  gem 'hanami-controller', '~> 2.0.0.rc1'
+  gem 'hanami', '2.0.0.rc1'
+  gem 'hanami-router', '2.0.0.rc1'
+  gem 'hanami-controller', '2.0.0.rc1'
 
   gem 'rack', '2.2.4'
 
