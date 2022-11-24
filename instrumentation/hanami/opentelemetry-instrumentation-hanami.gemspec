@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
                ::Dir.glob('*.md') +
                ['LICENSE', '.yardopts']
   spec.require_paths = ['lib']
-  spec.required_ruby_version = '>= 2.7.6'
+  spec.required_ruby_version = '>= 3.0.0'
 
   spec.add_dependency 'opentelemetry-api', '~> 1.0'
   spec.add_dependency 'opentelemetry-common', '~> 0.19.3'
@@ -32,9 +32,9 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'appraisal', '~> 2.2.0'
   spec.add_development_dependency 'bundler', '>= 1.17'
-  spec.add_development_dependency 'hanami', '~> 2.0.0.rc1'
-  spec.add_development_dependency 'hanami-router', '~> 2.0.0.rc1'
-  spec.add_development_dependency 'hanami-controller', '~> 2.0.0.rc1'
+  spec.add_development_dependency 'hanami'
+  spec.add_development_dependency 'hanami-router'
+  spec.add_development_dependency 'hanami-controller'
   spec.add_development_dependency 'minitest', '~> 5.0'
   spec.add_development_dependency 'opentelemetry-sdk', '~> 1.1'
   spec.add_development_dependency 'opentelemetry-test-helpers'
