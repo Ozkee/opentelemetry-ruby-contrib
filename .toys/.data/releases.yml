@@ -134,6 +134,7 @@ gems:
 
   - name: opentelemetry-instrumentation-hanami
     directory: instrumentation/hanami
+    version_rb_path: lib/opentelemetry/instrumentation/hanami/version.rb
     version_constant: [OpenTelemetry, Instrumentation, Hanami, VERSION]
 
   - name: opentelemetry-instrumentation-mongo
