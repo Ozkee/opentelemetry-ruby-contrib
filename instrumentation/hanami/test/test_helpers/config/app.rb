@@ -2,6 +2,5 @@
 
 module Bookshelf
   class Application < Hanami::App
-
   end
 end

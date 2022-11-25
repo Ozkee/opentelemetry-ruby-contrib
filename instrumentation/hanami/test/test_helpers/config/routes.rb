@@ -2,8 +2,8 @@
 
 module Bookshelf
   class Routes < Hanami::Routes
-    root { "Hello from Hanami" }
+    root { 'Hello from Hanami' }
 
-    get "/ok", to: ->(env) { [200, {}, ['actually ok']] }
+    get '/ok', to: ->(_env) { [200, {}, ['actually ok']] }
   end
 end

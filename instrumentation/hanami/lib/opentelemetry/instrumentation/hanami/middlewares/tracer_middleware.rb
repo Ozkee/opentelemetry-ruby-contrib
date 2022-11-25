@@ -22,6 +22,7 @@ module OpenTelemetry
           end
 
           private
+
           def trace_response(env, response)
             span = OpenTelemetry::Instrumentation::Rack.current_span
             return unless span.recording?
