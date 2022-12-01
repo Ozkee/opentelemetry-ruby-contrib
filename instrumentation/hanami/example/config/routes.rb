@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'hanami/routes'
+
 module Bookshelf
   # rubocop:disable Style/Documentation
   class Routes < Hanami::Routes
