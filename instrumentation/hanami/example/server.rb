@@ -29,6 +29,8 @@ gemfile(true) do
   gem 'opentelemetry-instrumentation-hanami', path: '../../hanami'
 end
 
+# Hanami Application is configured in test_helpers folder
+
 # To run this example run the `rackup` command
 # Example: rackup config.ru
 # Navigate to http://localhost:9292/

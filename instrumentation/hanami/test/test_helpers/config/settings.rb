@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'hanami/settings'
+
 module Bookshelf
   class Settings < Hanami::Settings
     # Define your app settings here, for example:

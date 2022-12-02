@@ -2,9 +2,9 @@
 
 require './server'
 
-require '../example/config/app'
-require '../example/config/routes'
-require '../example/config/settings'
+require '../test/test_helpers/config/app'
+require '../test/test_helpers/config/routes'
+require '../test/test_helpers/config/settings'
 
 Hanami.prepare
 
